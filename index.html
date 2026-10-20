@@ -552,7 +552,7 @@ const ENTER={
 };
 
 /* ===== Candado: la página solo abre desde LOCK.from (hora Colombia) ===== */
-const LOCK = { on:true, from:"2026-10-20T18:20:00-05:00" };
+const LOCK = { on:true, from:"2026-10-21T00:00:00-05:00" };
 let skew = 0; // diferencia con la hora real del servidor (así no sirve cambiar el reloj del celular)
 const unlocked = () => !LOCK.on || Date.now()+skew >= new Date(LOCK.from).getTime();
 function lockTick(){
